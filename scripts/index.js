@@ -9,7 +9,13 @@ $(document).ready(function() {
     items.forEach((item) => store.addItem(item));
     shoppingList.render();
   });
-
+  api.getItems((items) => {
+    const item = items[0];
+  
+    api.updateItem(item.id, { name: 'boardski' }, () => {
+      console.log('updated!');
+    });
+  });
 });
 
 
