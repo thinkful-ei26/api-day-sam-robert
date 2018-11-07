@@ -71,7 +71,7 @@ const shoppingList = (function(){
       store.addItem(newItemName);
       api.createItem(newItemName, (newItem) => {
         store.addItem(newItem);
-        // render();
+        render();
       });
       render();
     });
